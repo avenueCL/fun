@@ -1,49 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Fun Page</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9d5e5;
-        color: #444444;
-      }
-
-      h1 {
-        font-size: 48px;
-        text-align: center;
-        margin-top: 50px;
-      }
-
-      p {
-        font-size: 24px;
-        text-align: center;
-        margin-top: 30px;
-      }
-
-      .btn {
-        display: block;
-        width: 200px;
-        height: 50px;
-        margin: 50px auto 0;
-        background-color: #ff7f50;
-        color: #ffffff;
-        font-size: 24px;
-        text-align: center;
-        line-height: 50px;
-        text-decoration: none;
-        border-radius: 25px;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #ff6347;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to My Fun Page</h1>
-    <p>Thanks for visiting! This is a simple but fun webpage made with HTML and CSS.</p>
-    <a href="#" class="btn">Click Me!</a>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimalistic Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    }
+    
+    #container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+    
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #666666;
+    }
+    
+    #button {
+      width: 200px;
+      height: 60px;
+      border: none;
+      background-color: #ff7f50;
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    
+    #button:hover {
+      background-color: #ff6347;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Hello World!</h1>
+    <p>Welcome to my minimalistic website. Click the button to reveal a surprise.</p>
+    <button id="button">Click Me!</button>
+  </div>
+  <script>
+    const button = document.getElementById('button');
+    button.addEventListener('click', () => {
+      alert('You clicked the button! Have a great day!');
+    });
+  </script>
+</body>
 </html>
